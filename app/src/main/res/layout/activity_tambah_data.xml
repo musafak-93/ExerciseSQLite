@@ -45,7 +45,7 @@
                     android:textColor="@color/colorAccent"/>
                 <EditText
                     android:id="@+id/Et_Nama"
-                    android:layout_width="250dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="@string/masukkan_nama"
                     android:ems="10"
@@ -128,7 +128,7 @@
                     android:id="@+id/Btn_Save"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="180sp"
+                    android:layout_marginLeft="150sp"
                     android:layout_gravity="center"
                     android:text="@string/simpan"
                     android:textSize="8pt"
