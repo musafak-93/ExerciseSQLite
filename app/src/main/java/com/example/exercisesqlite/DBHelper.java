@@ -2,6 +2,7 @@ package com.example.exercisesqlite;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -44,5 +45,11 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put("alamat", alamat);
         db.insert("DaftarKontak", null, contentValues);
         return true;
+    }
+
+    public Cursor getData(int id) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("select * from DaftarKontak where id="+id+"",null);
+        return res;
     }
 }
