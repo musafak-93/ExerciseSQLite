@@ -2,11 +2,13 @@ package com.example.exercisesqlite;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class tambah_data extends AppCompatActivity {
 
@@ -62,6 +64,22 @@ public class tambah_data extends AppCompatActivity {
                 etAlamat.setFocusable(false);
                 etAlamat.setClickable(false);
             }
+        }
+    }
+
+    public void run(View view){
+        if (etNama.getText().toString().equals("")||
+        etNohp.getText().toString().equals("")||
+        etEmail.getText().toString().equals("")||
+        etAlamat.getText().toString().equals("")) {
+            Toast.makeText(getApplicationContext(), "Data Harus Lengkap :)",Toast.LENGTH_LONG).show();
+        }else {
+            mydb.insertContact(etNama.getText().toString(), etNohp.getText().toString(), etEmail.getText().toString(),
+                    etAlamat.getText().toString());
+            Toast.makeText(getApplicationContext(), "Insert Data Berhasil", Toast.LENGTH_LONG).show();
+
+            Intent i = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(i);
         }
     }
 }

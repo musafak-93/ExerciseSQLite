@@ -130,6 +130,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="150sp"
                     android:layout_gravity="center"
+                    android:onClick="run"
                     android:text="@string/simpan"
                     android:textSize="8pt"
                     android:textStyle="bold"/>
