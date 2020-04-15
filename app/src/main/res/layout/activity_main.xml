@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:gravity="center"
-                android:text="Daftar Kontak"
+                android:text="@string/daftar_kontak"
                 android:textSize="14pt"
                 android:textStyle="bold"/>
 
