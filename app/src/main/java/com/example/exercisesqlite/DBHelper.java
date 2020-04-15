@@ -1,5 +1,6 @@
 package com.example.exercisesqlite;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -32,5 +33,16 @@ public class DBHelper extends SQLiteOpenHelper {
         //TODO Auto-generated method stub
         db.execSQL("drop table if exists DaftarKontak");
         onCreate(db);
+    }
+
+    public boolean insertContact (String nama, String phone, String email, String alamat) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("nama", nama);
+        contentValues.put("phone", phone);
+        contentValues.put("email", email);
+        contentValues.put("alamat", alamat);
+        db.insert("DaftarKontak", null, contentValues);
+        return true;
     }
 }
