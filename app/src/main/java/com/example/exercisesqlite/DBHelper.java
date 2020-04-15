@@ -27,4 +27,10 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("create table DaftarKontak" +
                 "(id integer primary key, nama text, phone text, email text, alamat text)");
     }
+
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        //TODO Auto-generated method stub
+        db.execSQL("drop table if exists DaftarKontak");
+        onCreate(db);
+    }
 }
