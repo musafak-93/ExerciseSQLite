@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity{
     public boolean onContextItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.Edit:
-                Toast.makeText(this, "Edit", Toast.LENGTH_SHORT).show();
+                next();
                 return true;
             case R.id.Hapus:
                 Toast.makeText(this, "Hapus", Toast.LENGTH_SHORT).show();
@@ -102,6 +102,11 @@ public class MainActivity extends AppCompatActivity{
 
     public void pindah() {
         Intent intent = new Intent(MainActivity.this, tambah_data.class);
+        startActivity(intent);
+    }
+
+    public void next() {
+        Intent intent = new Intent(MainActivity.this, update_data.class);
         startActivity(intent);
     }
 }
