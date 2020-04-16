@@ -123,7 +123,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/Btn_Edit"
+                    android:id="@+id/Btn_Batal"
                     android:layout_width="0dp"
                     android:layout_height="25pt"
                     android:layout_marginLeft="10dp"
@@ -131,11 +131,12 @@
                     android:layout_weight="0.5"
                     android:background="@color/colorAccent"
                     android:text="@string/batal"
+                    android:onClick="back"
                     android:textSize="8pt"
                     android:textStyle="bold"/>
 
                 <Button
-                    android:id="@+id/Btn_Batal"
+                    android:id="@+id/Btn_Edit"
                     android:layout_width="0dp"
                     android:layout_height="25pt"
                     android:layout_marginLeft="10dp"

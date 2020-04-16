@@ -2,6 +2,7 @@ package com.example.exercisesqlite;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -13,16 +14,27 @@ public class update_data extends AppCompatActivity {
     int id_To_Update = 0;
     private DBHelper mydb;
     EditText eteditNama, eteditNohp, eteditEmail, eteditAlamat;
+    Button batal,update;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_data);
 
+        batal = findViewById(R.id.Btn_Batal);
+        batal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
+            }
+        });
+
         /*eteditNama = (EditText) findViewById(R.id.Et_Editnama);
         eteditNohp = (EditText) findViewById(R.id.Et_Editnohp);
         eteditEmail = (EditText) findViewById(R.id.Et_EditEmail);
         eteditAlamat = (EditText) findViewById(R.id.Et_EditAlamat);
+
 
         mydb = new DBHelper(this);
         Bundle extras = getIntent().getExtras();
