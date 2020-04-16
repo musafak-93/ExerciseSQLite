@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -84,11 +85,37 @@ public class MainActivity extends AppCompatActivity{
                 next();
                 return true;
             case R.id.Hapus:
-                Toast.makeText(this, "Hapus", Toast.LENGTH_SHORT).show();
+                showDialog();
                 return true;
             default:
                 return super.onContextItemSelected(item);
         }
+    }
+
+    private void showDialog() {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+
+        // set pesan dari dialog
+        alertDialogBuilder
+                .setMessage("Apakah Anda Yakin Ingin Menghapus Data?")
+                .setCancelable(false)
+                .setPositiveButton("Ya",new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,int id) {
+                        Toast.makeText(MainActivity.this, "Data Berhasil Terhapus", Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
+                    }
+                })
+                .setNegativeButton("Tidak",new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // jika tombol ini diklik, akan menutup dialog
+                        // dan tidak terjadi apa2
+                        dialog.cancel();
+                    }
+                });
+        // membuat alert dialog dari builder
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        // menampilkan alert dialog
+        alertDialog.show();
     }
 
     public boolean onKeyDown(int keycode, KeyEvent event) {
