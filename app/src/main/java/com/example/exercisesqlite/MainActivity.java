@@ -1,14 +1,17 @@
 package com.example.exercisesqlite;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -38,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
         mydb = new DBHelper(this);
         ArrayList arrayList = mydb.getAllContacts();
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, arrayList);
@@ -65,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onKeyDown(keycode, event);
     }
+
+
 
     public void pindah() {
         Intent intent = new Intent(MainActivity.this, tambah_data.class);
