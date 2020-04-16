@@ -6,4 +6,147 @@
     android:layout_height="match_parent"
     tools:context=".update_data">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/Tv_Daftarkontak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/update_data"
+            android:textSize="14pt"
+            android:textStyle="bold"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/Tv_Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nama"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorAccent"/>
+                <EditText
+                    android:id="@+id/Et_Editnama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/masukkan_nama"
+                    android:ems="10"
+                    android:inputType="textPersonName"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/Tv_Nohp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nomor_telepon"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorAccent"/>
+                <EditText
+                    android:id="@+id/Et_Editnohp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/nomor_telepon"
+                    android:ems="10"
+                    android:inputType="number"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/Tv_Email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorAccent"/>
+                <EditText
+                    android:id="@+id/Et_EditEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/masukkan_email"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/Tv_Alamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alamat"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorAccent"/>
+                <EditText
+                    android:id="@+id/Et_EditAlamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/masukkan_alamat"
+                    android:ems="10"
+                    android:inputType="textPersonName"/>
+            </TableRow>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Btn_Edit"
+                    android:layout_width="0dp"
+                    android:layout_height="25pt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@color/colorAccent"
+                    android:text="@string/batal"
+                    android:textSize="8pt"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:id="@+id/Btn_Batal"
+                    android:layout_width="0dp"
+                    android:layout_height="25pt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@color/colorAccent"
+                    android:text="@string/ubah_data"
+                    android:textSize="8pt"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </TableLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

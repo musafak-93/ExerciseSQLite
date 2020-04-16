@@ -11,4 +11,7 @@
     <string name="masukkan_email">Masukkan Email</string>
     <string name="masukkan_alamat">Masukkan Alamat</string>
     <string name="simpan">SIMPAN</string>
+    <string name="update_data">Update Data</string>
+    <string name="batal">Batal</string>
+    <string name="ubah_data">Ubah Data</string>
 </resources>
