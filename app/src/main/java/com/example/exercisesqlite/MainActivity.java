@@ -77,6 +77,20 @@ public class MainActivity extends AppCompatActivity{
         getMenuInflater().inflate(R.menu.popup, menu);
     }
 
+    //Event jika pilihan dalam menu diklik
+    public boolean onContextItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.Edit:
+                Toast.makeText(this, "Edit", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.Hapus:
+                Toast.makeText(this, "Hapus", Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return super.onContextItemSelected(item);
+        }
+    }
+
     public boolean onKeyDown(int keycode, KeyEvent event) {
         if (keycode == KeyEvent.KEYCODE_BACK){
             moveTaskToBack(true);
