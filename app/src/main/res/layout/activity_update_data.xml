@@ -42,7 +42,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/nama"
                     android:textSize="20sp"
-                    android:textColor="@color/colorAccent"/>
+                    android:textColor="@color/text"/>
                 <EditText
                     android:id="@+id/Et_Editnama"
                     android:layout_width="wrap_content"
@@ -63,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/nomor_telepon"
                     android:textSize="20sp"
-                    android:textColor="@color/colorAccent"/>
+                    android:textColor="@color/text"/>
                 <EditText
                     android:id="@+id/Et_Editnohp"
                     android:layout_width="match_parent"
@@ -84,7 +84,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/email"
                     android:textSize="20sp"
-                    android:textColor="@color/colorAccent"/>
+                    android:textColor="@color/text"/>
                 <EditText
                     android:id="@+id/Et_EditEmail"
                     android:layout_width="match_parent"
@@ -105,7 +105,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/alamat"
                     android:textSize="20sp"
-                    android:textColor="@color/colorAccent"/>
+                    android:textColor="@color/text"/>
                 <EditText
                     android:id="@+id/Et_EditAlamat"
                     android:layout_width="match_parent"
@@ -129,9 +129,8 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_weight="0.5"
-                    android:background="@color/colorAccent"
+                    android:background="@color/btn"
                     android:text="@string/batal"
-                    android:onClick="back"
                     android:textSize="8pt"
                     android:textStyle="bold"/>
 
@@ -142,7 +141,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_weight="0.5"
-                    android:background="@color/colorAccent"
+                    android:background="@color/btn"
                     android:text="@string/ubah_data"
                     android:textSize="8pt"
                     android:textStyle="bold"/>
